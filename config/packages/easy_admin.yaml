@@ -1,0 +1,8 @@
+easy_admin:
+    entities:
+        # List the entity class name you want to manage
+        - App\Entity\EAV\Entity
+        - App\Entity\EAV\EntityType
+        - App\Entity\EAV\Attribute
+        - App\Entity\EAV\AttributeGroup
+        - App\Entity\EAV\Value
