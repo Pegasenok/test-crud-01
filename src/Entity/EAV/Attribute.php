@@ -80,4 +80,10 @@ class Attribute
     {
         $this->attributeGroup = $attributeGroup;
     }
+
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
 }

@@ -20,7 +20,8 @@ class ValueCrudController extends AbstractCrudController
         return [
             IdField::new('id')->hideOnForm(),
             TextField::new('value'),
-            AssociationField::new('entity')
+            AssociationField::new('entity'),
+            AssociationField::new('attribute'),
         ];
     }
 }
