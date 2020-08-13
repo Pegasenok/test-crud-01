@@ -1,8 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-<div id="products-holder"></div>
-{% endblock %}
+{% block body %}{% apply spaceless %}
+<div id="products-holder">
+    <table>
+        <tbody>
+        <tr>
+            <th>Продукт</th>
+            <th>Цена</th>
+            <th>Подробности</th>
+        </tr>
+        <tr>
+            <th>asdqwer</th>
+            <th>asdqwer</th>
+            <th>asdqwer</th>
+        </tr>
+        <tr>
+            <th>asdqwer</th>
+            <th>asdqwer</th>
+            <th>asdqwer</th>
+        </tr>
+        <tr>
+            <th>asdqwer</th>
+            <th>asdqwer</th>
+            <th>asdqwer</th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+{% endapply %}{% endblock %}
 
 {% block javascripts %}
     {{ parent() }}

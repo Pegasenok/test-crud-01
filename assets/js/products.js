@@ -30,6 +30,6 @@ class Products extends React.Component {
     }
 }
 
-ReactDOM.render(<Products />, document.getElementById('products-holder'));
+ReactDOM.hydrate(<Products />, document.getElementById('products-holder'));
 
 console.log('Products here');
