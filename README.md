@@ -21,4 +21,6 @@
 Запуск:
 ```
 docker-compose up
+docker run -itv ~/.docker-yarn-cache:/root/yarn-cache -v `pwd`:/opt/project --workdir /opt/project node yarn install
+docker run -itv ~/.docker-yarn-cache:/root/yarn-cache -v `pwd`:/opt/project --workdir /opt/project node yarn encore dev --watch
 ```
