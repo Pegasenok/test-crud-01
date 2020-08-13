@@ -5,7 +5,6 @@ namespace App\Controller\Admin;
 use App\Entity\EAV\Entity;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
@@ -24,7 +23,7 @@ class EntityCrudController extends AbstractCrudController
             TextField::new('name'),
             NumberField::new('price'),
             AssociationField::new('entityType')->setCrudController(EntityTypeCrudController::class),
-            CollectionField::new('values')->setEntryIsComplex(true),
+            AssociationField::new('values')->setFormTypeOption('disabled', true),
         ];
     }
 }

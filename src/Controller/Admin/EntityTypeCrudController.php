@@ -20,7 +20,7 @@ class EntityTypeCrudController extends AbstractCrudController
         return [
             IdField::new('id'),
             TextField::new('name'),
-            AssociationField::new('entities'),
+            AssociationField::new('entities')->setFormTypeOption('disabled', true),
             AssociationField::new('attributeGroups'),
         ];
     }
