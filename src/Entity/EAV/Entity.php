@@ -14,12 +14,12 @@ use Doctrine\ORM\Mapping as ORM;
 class Entity
 {
     /**
-     * @var int
+     * @var ?int
      * @ORM\Id()
      * @ORM\Column(name="id", type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private int $id = 0;
+    private ?int $id = 0;
 
     /**
      * @var EntityType
