@@ -26,13 +26,19 @@ class EntityType
      * @var string
      * @ORM\Column type="integer"
      */
-    private string $type;
+    private string $name;
 
     /**
      * @var Collection|Entity[]
      * @ORM\OneToMany(targetEntity="Entity", mappedBy="entityType")
      */
     private Collection $entities;
+
+    /**
+     * @var iterable
+     * @ORM\ManyToMany (targetEntity="AttributeGroup", inversedBy="entityTypes")
+     */
+    private iterable $attributeGroups;
 
     /**
      * @return int
@@ -53,17 +59,17 @@ class EntityType
     /**
      * @return string
      */
-    public function getType(): string
+    public function getName(): string
     {
-        return $this->type;
+        return $this->name;
     }
 
     /**
-     * @param string $type
+     * @param string $name
      */
-    public function setType(string $type): void
+    public function setName(string $name): void
     {
-        $this->type = $type;
+        $this->name = $name;
     }
 
     /**
@@ -84,8 +90,22 @@ class EntityType
 
     public function __toString()
     {
-        return $this->getType();
+        return $this->getName();
     }
 
+    /**
+     * @return iterable
+     */
+    public function getAttributeGroups(): iterable
+    {
+        return $this->attributeGroups;
+    }
 
+    /**
+     * @param iterable $attributeGroups
+     */
+    public function setAttributeGroups(iterable $attributeGroups): void
+    {
+        $this->attributeGroups = $attributeGroups;
+    }
 }

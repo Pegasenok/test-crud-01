@@ -19,8 +19,9 @@ class EntityTypeCrudController extends AbstractCrudController
     {
         return [
             IdField::new('id'),
-            TextField::new('type'),
+            TextField::new('name'),
             AssociationField::new('entities'),
+            AssociationField::new('attributeGroups'),
         ];
     }
 }
